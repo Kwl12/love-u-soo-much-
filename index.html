@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>for bintang · from someone yang selaluu peduli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #ffe6f0 0%, #ffd6e4 100%);
+      font-family: 'Quicksand', sans-serif;
+      padding: 2rem 1.2rem;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* aksesoris perpisahan (topi toga, pita kelulusan, bunga) */
+    .floating-grad {
+      position: fixed;
+      pointer-events: none;
+      z-index: 5;
+      opacity: 0.7;
+    }
+    .cap { top: 2%; left: 1%; width: 85px; animation: floatSlow 14s infinite ease; }
+    .ribbon { bottom: 3%; right: 2%; width: 100px; animation: floatSlow 16s infinite reverse; }
+    .tassel { top: 25%; right: 0; width: 75px; animation: floatSlow 12s infinite; }
+    .memory-flower { bottom: 18%; left: 0; width: 90px; animation: floatSlow 15s infinite; }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(2deg); }
+    }
+
+    /* main card */
+    .farewell-card {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(255, 245, 250, 0.6);
+      backdrop-filter: blur(16px);
+      border-radius: 72px;
+      padding: 2rem;
+      box-shadow: 0 30px 50px rgba(150, 50, 80, 0.2);
+      border: 1px solid rgba(255, 195, 210, 0.7);
+      position: relative;
+      z-index: 20;
+    }
+
+    .title-pink {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .title-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      font-style: italic;
+      background: linear-gradient(125deg, #bb5577, #e889aa, #c95f81);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .title-sub {
+      font-size: 0.85rem;
+      color: #c97a98;
+      border-top: 1px solid #ffc0cf;
+      display: inline-block;
+      padding-top: 6px;
+      letter-spacing: 2px;
+    }
+
+    /* pesan panjang */
+    .letter-long {
+      background: rgba(255, 250, 252, 0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 48px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid #ffb8cc;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #8f4f6c;
+      white-space: pre-line;
+      text-align: left;
+    }
+
+    /* foto album grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin: 2rem 0 1.5rem;
+    }
+    .polaroid {
+      background: white;
+      border-radius: 28px;
+      padding: 14px 14px 22px 14px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      text-align: center;
+    }
+    .polaroid:hover {
+      transform: scale(1.02);
+    }
+    .polaroid img, .polaroid video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 24px;
+      background: #f3e4ea;
+    }
+    .polaroid .caption {
+      font-family: 'Playfair Display', serif;
+      margin-top: 12px;
+      font-size: 0.75rem;
+      color: #bb6382;
+    }
+
+    /* music button */
+    .music-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: rgba(255, 230, 240, 0.9);
+      backdrop-filter: blur(12px);
+      border-radius: 60px;
+      padding: 8px 18px;
+      display: flex;
+      gap: 12px;
+      z-index: 30;
+      cursor: pointer;
+      border: 1px solid #ffb0c2;
+    }
+    .music-float i { font-size: 1.5rem; color: #c95f81; }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.7rem;
+      color: #c17795;
+    }
+    @media (max-width: 700px) {
+      .title-main { font-size: 2rem; }
+      .letter-long { font-size: 0.85rem; padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<img class="floating-grad cap" src="https://cdn-icons-png.flaticon.com/512/3135/3135783.png" alt="graduation cap">
+<img class="floating-grad ribbon" src="https://cdn-icons-png.flaticon.com/512/9550/9550419.png" alt="pink ribbon">
+<img class="floating-grad tassel" src="https://cdn-icons-png.flaticon.com/512/8717/8717978.png" alt="tassel">
+<img class="floating-grad memory-flower" src="https://cdn-icons-png.flaticon.com/512/3060/3060581.png" alt="flower">
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="https://files.catbox.moe/qskdli.mp3" type="audio/mpeg">
+</audio>
+<div class="music-float" id="musicToggle">
+  <i class="fas fa-play" id="musicIcon"></i>
+  <span style="font-size:0.7rem;"> cobaa pencett </span>
+</div>
+
+<div class="farewell-card">
+  <div class="title-pink">
+    <div class="title-main">for bintang</div>
+    <div class="title-sub">♡  dari SOMEONE yangg selalu sayang ♡</div>
+  </div>
+
+  <div class="letter-long">
+    hii bintangg,
+    gaa terasaaa yaa perasaan baruu kemarinn kitaa kelass 9 ternyata kitaa tinggal seminggu lagii dii spenlass.
+    bintangg, sandii mauu ucapinnn banyakk makasii kee bintangg karnaa bintangg udahh mauu jadii yang terbaikk buat sandii.
+    sekarang sandii ninggalin hall yang burukk hehehehe kayaa smoking sandii udahh nggaa lagiii heheee.
+    maafin sandii yaa kaloo 8 bulan inii sandii banyakk salahhh samaa bintangg.
+    di maafin yahhh, akuu tauu rasanyaa gimanaa pastii bintangg berat hatii buatt maafin nyaaa hehehehe 😅
+    sandii mauu ngucapin banyakk banyakk terimakasii kee bintangg karnaa udahh jadii yangg terbaikk.
+    sandii merasa dii hargaii sekalii samaa bintangg.
+    bintangg ngajarin banyakk perubahan buatt sandii, bintangg ituu berharga bangett.
+    baruu kalii inii gamauu ngelepasin orangg yangg akuu sayangg walaupun sifatt akuu kadangg bikin kamu kesel dan emosii.
+    maaf yahh hehehe.
+    see u next time sayankkk, semogaa kitaa masii bisaa bersamaan yacc.
+    akuu mauu kamuu seterusnyaa hehehehe.
+    maaf jugaa karnaa tadii siangg yahh.
+    💗
+  </div>
+
+  <!-- galeri foto (album kenangan) -->
+  <div class="photo-grid" id="photoGrid"></div>
+
+  <div class="footer-note">
+    <i class="fas fa-heart" style="color:#e67b9e;"></i> sandii untuk bintang — selamat melanjutkan, sampai jumpa nanti <i class="fas fa-heart" style="color:#e67b9e;"></i>
+  </div>
+</div>
+
+<script>
+  const mediaItems = [
+    "https://files.catbox.moe/76rjwb.jpg",
+    "https://files.catbox.moe/6cnvy4.jpg",
+    "https://files.catbox.moe/tr8g6d.jpg",
+    "https://files.catbox.moe/1zbxip.jpg",
+    "https://files.catbox.moe/sms602.jpg",
+    "https://files.catbox.moe/cjcwh0.mp4",
+    "https://files.catbox.moe/vrznte.jpg"
+  ];
+  const captions = [
+    " lucuu amatt sangat lucuu🌸",
+    "senyum bintang yang selalu buat sandi betah",
+    "hall buruk udah ditinggal, yang baik terus dikenang",
+    "terima kasih buat 8 bulan penuh warna 💗",
+    "giliran kita pamit, tapi janji ketemu lagi yaa",
+    "video momen tak terlupakan 🎥",
+    "bintang, kamu berharga banget"
+  ];
+
+  const grid = document.getElementById('photoGrid');
+  mediaItems.forEach((url, idx) => {
+    const isVideo = url.includes('.mp4');
+    const div = document.createElement('div');
+    div.className = 'polaroid';
+    if (isVideo) {
+      const video = document.createElement('video');
+      video.src = url;
+      video.controls = true;
+      video.preload = "metadata";
+      video.style.width = '100%';
+      video.style.height = '200px';
+      video.style.objectFit = 'cover';
+      div.appendChild(video);
+    } else {
+      const img = document.createElement('img');
+      img.src = url;
+      img.loading = "lazy";
+      div.appendChild(img);
+    }
+    const cap = document.createElement('div');
+    cap.className = 'caption';
+    cap.innerText = captions[idx % captions.length];
+    div.appendChild(cap);
+    grid.appendChild(div);
+  });
+
+  // music controller
+  const audio = document.getElementById('bgMusic');
+  const musicDiv = document.getElementById('musicToggle');
+  const musicIcon = document.getElementById('musicIcon');
+  let playing = false;
+  musicDiv.onclick = () => {
+    if (playing) {
+      audio.pause();
+      musicIcon.className = 'fas fa-play';
+    } else {
+      audio.play().catch(e => console.log("autoplay need interaction"));
+      musicIcon.className = 'fas fa-pause';
+    }
+    playing = !playing;
+  };
+  // autoplay fallback: mulai setelah klik pertama di halaman
+  document.body.addEventListener('click', function once() {
+    if (!playing) {
+      audio.play().then(() => {
+        playing = true;
+        musicIcon.className = 'fas fa-pause';
+      }).catch(() => {});
+    }
+    document.body.removeEventListener('click', once);
+  });
+</script>
+</body>
+</html>
